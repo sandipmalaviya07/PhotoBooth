@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{13D3C91A-D54C-4662-97F8-352A90253729}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PhotoBooth</RootNamespace>
+    <AssemblyName>PhotoBooth</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=1.1.0.0, Culture=neutral, PublicKeyToken=9a0d19ffd4e7fe67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging, Version=1.1.0.0, Culture=neutral, PublicKeyToken=d604c8342bbdeba9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math, Version=1.1.0.0, Culture=neutral, PublicKeyToken=ec69efb6646d15f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CameraStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CameraStart.Designer.cs">
+      <DependentUpon>CameraStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\SliderControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\SliderControl.Designer.cs">
+      <DependentUpon>SliderControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExitButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExitButton.Designer.cs">
+      <DependentUpon>ExitButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhotoBoothHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhotoBoothHome.Designer.cs">
+      <DependentUpon>PhotoBoothHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhotoBoothSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhotoBoothSetting.Designer.cs">
+      <DependentUpon>PhotoBoothSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhotoGallery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhotoGallery.Designer.cs">
+      <DependentUpon>PhotoGallery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CustomControls\ResizerControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ResizerControl.Designer.cs">
+      <DependentUpon>ResizerControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CameraStart.resx">
+      <DependentUpon>CameraStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhotoBoothHome.resx">
+      <DependentUpon>PhotoBoothHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhotoBoothSetting.resx">
+      <DependentUpon>PhotoBoothSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExitButton.resx">
+      <DependentUpon>ExitButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhotoGallery.resx">
+      <DependentUpon>PhotoGallery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\1.png" />
+    <Content Include="Images\augmented_image.png" />
+    <Content Include="Images\bg.png" />
+    <Content Include="Images\btn_bg.png" />
+    <Content Include="Images\BW.png" />
+    <Content Include="Images\camera setting.png" />
+    <Content Include="Images\Camera_iocn.png" />
+    <Content Include="Images\Chromatic_effect.png" />
+    <Content Include="Images\circle.png" />
+    <Content Include="Images\cooler_effect.png" />
+    <Content Include="Images\countdown_img.png" />
+    <Content Include="Images\Distort_effect.png" />
+    <Content Include="Images\Divider.png" />
+    <Content Include="Images\effects_btn.png" />
+    <Content Include="Images\Email.png" />
+    <Content Include="Images\Event_icon.png" />
+    <Content Include="Images\Exit_icon.png" />
+    <Content Include="Images\Facebook.png" />
+    <Content Include="Images\farme.png" />
+    <Content Include="Images\Fav_icon.png" />
+    <Content Include="Images\Folder.png" />
+    <Content Include="Images\foursquare.png" />
+    <Content Include="Images\FTP.png" />
+    <Content Include="Images\Gallery_btn.png" />
+    <Content Include="Images\gallery_img.png" />
+    <Content Include="Images\gallery_img_02.png" />
+    <Content Include="Images\gallery_img_03.png" />
+    <Content Include="Images\gallery_img_04.png" />
+    <Content Include="Images\Google+.png" />
+    <Content Include="Images\Instant_effect.png" />
+    <Content Include="Images\Instgaram.png" />
+    <Content Include="Images\iocn.png" />
+    <Content Include="Images\Layout_icon.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\look_at_camera.png" />
+    <Content Include="Images\main_bg.png" />
+    <Content Include="Images\Marketing_icon.png" />
+    <Content Include="Images\more_bnt.png" />
+    <Content Include="Images\My account_icon.png" />
+    <Content Include="Images\None_effect.png" />
+    <Content Include="Images\On click btn.png" />
+    <Content Include="Images\Orange_effect.png" />
+    <Content Include="Images\Orton_effect.png" />
+    <Content Include="Images\Photo effect for gallery.png" />
+    <Content Include="Images\photo_01.png" />
+    <Content Include="Images\Photo_02.png" />
+    <Content Include="Images\Photo_03.png" />
+    <Content Include="Images\Photo_bg.png" />
+    <Content Include="Images\photo_btn.png" />
+    <Content Include="Images\Photo_main.png" />
+    <Content Include="Images\Picture_icon.png" />
+    <Content Include="Images\Pic_to show effect.png" />
+    <Content Include="Images\Pinterest.png" />
+    <Content Include="Images\Popart_effect.png" />
+    <Content Include="Images\Printer_icon.png" />
+    <Content Include="Images\Print_btn.png" />
+    <Content Include="Images\Print_station.png" />
+    <Content Include="Images\Profile_iocn.png" />
+    <Content Include="Images\props_btn.png" />
+    <Content Include="Images\prop_01.png" />
+    <Content Include="Images\Prop_02.png" />
+    <Content Include="Images\prop_03.png" />
+    <Content Include="Images\Prop_04.png" />
+    <Content Include="Images\Prop_05.png" />
+    <Content Include="Images\Prop_06.png" />
+    <Content Include="Images\Prop_07.png" />
+    <Content Include="Images\Prop_kept_img.png" />
+    <Content Include="Images\Reset_icon.png" />
+    <Content Include="Images\Restore_icon.png" />
+    <Content Include="Images\Save_icon.png" />
+    <Content Include="Images\setting buttons.png" />
+    <Content Include="Images\setting_icon.png" />
+    <Content Include="Images\Share_btn.png" />
+    <Content Include="Images\Sketch_effect.png" />
+    <Content Include="Images\Sms.png" />
+    <Content Include="Images\Social_iocn.png" />
+    <Content Include="Images\Summer_effect.png" />
+    <Content Include="Images\Swipe_img.png" />
+    <Content Include="Images\tranparent.png" />
+    <Content Include="Images\Twitter.png" />
+    <Content Include="Images\Video_btn.png" />
+    <Content Include="Images\Vintage_effect.png" />
+    <Content Include="Layout\00_desktop.png" />
+    <Content Include="Layout\3 shots shown_desktop.png" />
+    <Content Include="Layout\countdown_desktop.png" />
+    <Content Include="Layout\Drag and drop_desktop.png" />
+    <Content Include="Layout\sc1_l_desktop.png" />
+    <Content Include="Layout\sc2_Augmeneted_desktop.png" />
+    <Content Include="Layout\sc2_face change_desktop.png" />
+    <Content Include="Layout\sc2_gallery_desktop.png" />
+    <Content Include="Layout\sc6_desktop.png" />
+    <Content Include="Layout\Settings_camera_desktop.png" />
+    <Content Include="Layout\Settings_desktop.png" />
+    <Content Include="Layout\Settings_event_desktop.png" />
+    <Content Include="Layout\Settings_exit_desktop.png" />
+    <Content Include="Layout\Settings_layouts_desktop.png" />
+    <Content Include="Layout\Settings_Marketing_desktop.png" />
+    <Content Include="Layout\Settings_my account_desktop.png" />
+    <Content Include="Layout\Settings_picture_02_desktop.png" />
+    <Content Include="Layout\Settings_printer_desktop.png" />
+    <Content Include="Layout\Settings_profile_desktop.png" />
+    <Content Include="Layout\Settings_restore_desktop.png" />
+    <Content Include="Layout\Settings_Social media_desktop.png" />
+    <None Include="Resources\circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
